@@ -4,13 +4,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Middleman + Webpack + Netlify CMS</title>
     <meta name="description" content="A Middleman + Netlify CMS starter running an external pipeline with Webpack & Babel">
-    <%= stylesheet_link_tag "all" %>
+    <link rel="stylesheet" type="text/css" href="main.css">
   </head>
 
   <body>
     <%= yield %>
 
     <%= javascript_include_tag "main" %>
+
+    
     <% if app.build? %>
       <script type="text/javascript">
         if ('serviceWorker' in navigator) {

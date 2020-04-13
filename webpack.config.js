@@ -1,6 +1,13 @@
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const env = process.env.NODE_ENV
+const filename = env == 'production' ? '[name].[contenthash]' : 'name'
+
 
 const externals = [
   {
@@ -32,7 +39,7 @@ module.exports = {
 
   output: {
     path: __dirname + '/dist',
-    filename: '[name].js',
+    filename: `${filename}.js`
   },
 
   module: {
@@ -44,11 +51,8 @@ module.exports = {
       },
       {
         test: /\.(sa|sc|c)ss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
-      },
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        exclude: /node_modules/,
+        use: ["style-loader", MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "sass-loader"]
       }
     ]
   },
@@ -67,16 +71,18 @@ module.exports = {
           [
             {
               from: require.resolve(path.join(name, assetDir, assetName)),
-              to: assetName,
-            },
-            sourceMap && {
-              from: require.resolve(path.join(name, assetDir, sourceMap)),
-              to: sourceMap,
-            },
+              to: `${filename}`,
+            }
           ].filter(item => item)
         )
       )
     ),
+
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({}),
+    new MiniCssExtractPlugin({
+      filename: `${filename}.css`
+    })
   ],
 
   optimization: { 

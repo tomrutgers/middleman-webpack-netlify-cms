@@ -30,8 +30,6 @@ page '/*.txt',  layout: false
 page '/admin/*', layout: false
 page '/sitemap.xml', layout: false
 
-ignore '*.map'
-
 proxy '/sw.js', 'serviceworkers.txt', layout: false, ignore: true
 proxy '/_headers', '/headers.txt', layout: false, ignore: true
 proxy '_redirects', 'netlify-redirects', ignore: true
@@ -42,10 +40,9 @@ end
 
 configure :build do
   ignore   File.join(config[:js_dir], '*')
+  ignore   File.join(config[:css_dir], '*')
   set      :relative_links, true
-  activate :asset_hash
   activate :gzip
-  activate :minify_css
   activate :relative_assets
 end
 
