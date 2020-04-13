@@ -1,0 +1,22 @@
+backend:
+  name: git-gateway
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "[skip ci] Upload “{{path}}”"
+    deleteMedia: "[skip ci] Delete “{{path}}”"
+
+media_folder: source/assets/images/uploads/
+public_folder: /assets/images/uploads/
+
+collections:
+  - name: posts
+    label: Posts
+    format: yml
+    extension: yml
+    folder: data/posts/
+    create: true
+    slug: '{{title}}'
+    fields:
+      - {label: Title, name: title, widget: string, required: true}

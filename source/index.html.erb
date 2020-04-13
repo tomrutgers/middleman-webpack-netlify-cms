@@ -1,0 +1,8 @@
+<h1> Blog posts</h1>
+<ul>
+  <% data.posts.each do |_filename, post| %>
+    <li>
+      <%= link_to post.title, "/posts/#{post[:title].parameterize}/" %>
+      <% end %>
+    </li>
+</ul>
