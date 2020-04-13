@@ -70,7 +70,7 @@ module.exports = {
           [
             {
               from: require.resolve(path.join(name, assetDir, assetName)),
-              to: `${filename}`,
+              to: filename,
             }
           ].filter(item => item)
         )

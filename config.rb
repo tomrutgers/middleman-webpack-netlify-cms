@@ -12,10 +12,6 @@ set :js_dir,     'assets/javascripts'
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
-activate :autoprefixer do |config|
-  config.browsers = '>0.25%, not ie 11, not op_mini all, not dead'
-end
-
 activate(
   :external_pipeline,
   name: :webpack,
@@ -31,6 +27,7 @@ page '/admin/*', layout: false
 page '/sitemap.xml', layout: false
 
 proxy '/sw.js', 'serviceworkers.txt', layout: false, ignore: true
+proxy '/cache-polyfill.js', 'cache-polyfill.txt', layout: false, ignore: true
 proxy '/_headers', '/headers.txt', layout: false, ignore: true
 proxy '_redirects', 'netlify-redirects', ignore: true
 
