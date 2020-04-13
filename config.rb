@@ -4,10 +4,10 @@ Dir['./*/*.rb'].each { |file| load file }
 # Load Sass from node_modules
 config[:sass_assets_paths] << File.join(root, 'node_modules')
 
-set(:css_dir,    'assets/stylesheets')
-set(:fonts_dir,  'assets/fonts')
-set(:images_dir, 'assets/images')
-set(:js_dir,     'assets/javascripts')
+set :css_dir,    'assets/stylesheets'
+set :fonts_dir,  'assets/fonts'
+set :images_dir, 'assets/images'
+set :js_dir,     'assets/javascripts'
 
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
@@ -24,11 +24,13 @@ activate(
   latency: 1
 )
 
-page('/*.xml',  layout: false)
-page('/*.json', layout: false)
-page('/*.txt',  layout: false)
-page('/admin/*', layout: false)
+page '/*.xml',  layout: false
+page '/*.json', layout: false
+page '/*.txt',  layout: false
+page '/admin/*', layout: false
 page '/sitemap.xml', layout: false
+
+ignore '*.map'
 
 proxy '/sw.js', 'serviceworkers.txt', layout: false, ignore: true
 proxy '/_headers', '/headers.txt', layout: false, ignore: true

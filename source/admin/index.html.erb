@@ -6,7 +6,11 @@
 
     <title>Content Manager</title>
 
-    <script src="https://identity-js.netlify.com/v1/netlify-identity-widget.js"></script>
+    <%= javascript_include_tag "react.production.min" %>
+    <%= javascript_include_tag "react-dom.production.min.js" %>
+    <%= javascript_include_tag "netlify-cms-app.js" %>
+    <%= javascript_include_tag "https://identity-js.netlify.com/v1/netlify-identity-widget.js" %>
+
   </head>
   <body>
     <%= javascript_include_tag "cms" %>

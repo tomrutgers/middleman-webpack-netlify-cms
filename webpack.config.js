@@ -1,6 +1,6 @@
 const path = require('path');
 const TerserPlugin = require('terser-webpack-plugin');
-const CopyPlugin = require("copy-webpack-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
 
 const externals = [
   {
@@ -20,7 +20,6 @@ const externals = [
     global: `NetlifyCmsApp`,
     assetDir: `dist`,
     assetName: `netlify-cms-app.js`,
-    sourceMap: `netlify-cms-app.js.map`,
   },
 ]
 
