@@ -5,7 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const env = process.env.NODE_ENV
-const filename = env == 'production' ? '[name].[contenthash]' : 'name'
+const filename = env == 'production' ? '[name].[contenthash]' : '[name]'
 
 
 const externals = [
