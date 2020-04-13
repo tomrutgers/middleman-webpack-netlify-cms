@@ -3,7 +3,6 @@ const TerserPlugin = require('terser-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const env = process.env.NODE_ENV
 const filename = env == 'production' ? '[name].[contenthash]' : 'name'
@@ -79,7 +78,6 @@ module.exports = {
     ),
 
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin({}),
     new MiniCssExtractPlugin({
       filename: `${filename}.css`
     })

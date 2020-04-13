@@ -9,7 +9,7 @@ self.addEventListener('install', function(e) {
   e.waitUntil(
     caches.open(CURRENT_CACHES.prefetch).then(function(cache) {
      return cache.addAll([
-      <% sitemap.resources.select { | resource | resource.path =~ /^(?!.json|sw|cache-polyfill.js|netlify-cms-app.js|react.production.min.js|react-dom.production.min.js$).*\.(html|js|css|woff)$/ }.each do | resource | %>
+      <% sitemap.resources.select { | resource | resource.path =~ /^(?!.json|sw|cache-polyfill.js$).*\.(html|js|css|woff)$/ }.each do | resource | %>
         "<%= resource.url.gsub('.html', '/') %>",
       <%end%>
      ]);
