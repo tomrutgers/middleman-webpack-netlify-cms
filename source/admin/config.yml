@@ -19,4 +19,5 @@ collections:
     create: true
     slug: '{{title}}'
     fields:
-      - {label: Title, name: title, widget: string, required: true}
+      - {label: Title, name: title, widget: string}
+      - {label: Body, name: body, widget: markdown}
