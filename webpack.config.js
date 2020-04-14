@@ -3,10 +3,11 @@ const TerserPlugin = require('terser-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const PurgecssPlugin = require('purgecss-webpack-plugin');
+const glob = require('glob')
 
 const env = process.env.NODE_ENV
 const filename = env == 'production' ? '[name].[contenthash]' : '[name]'
-
 
 const externals = [
   {
@@ -80,6 +81,9 @@ module.exports = {
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: `${filename}.css`
+    }),
+    new PurgecssPlugin({
+      paths: () => glob.sync(`${path.join(__dirname, 'source')}/**/*`, { nodir: true })
     })
   ],
 
