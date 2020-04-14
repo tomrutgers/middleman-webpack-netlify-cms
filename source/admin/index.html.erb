@@ -6,13 +6,18 @@
 
     <title>Content Manager</title>
 
-    <%= javascript_include_tag "react.production.min" %>
-    <%= javascript_include_tag "react-dom.production.min.js" %>
-    <%= javascript_include_tag "netlify-cms-app.js" %>
     <%= javascript_include_tag "https://identity-js.netlify.com/v1/netlify-identity-widget.js" %>
+
+    <%# Getting the assets generated from webpack. Using a regex because of asset hashes%>
+    <%= javascript_include_tag sitemap.resources.find {|resource| resource.path =~ /(react.production)/}.url%>
+    <%= javascript_include_tag sitemap.resources.find {|resource| resource.path =~ /(react-dom)/}.url%>
+    <%= javascript_include_tag sitemap.resources.find {|resource| resource.path =~ /(netlify-cms-app)/}.url%>
 
   </head>
   <body>
-    <%= javascript_include_tag "cms" %>
+    <%# Getting the cms script generated from webpack. Using a regex because of asset hashes%>
+    <% sitemap.resources.select {|resource| resource.path =~ /^(?!.*txt|assets)(cms).*$/}.each do |resource| %>
+      <%= javascript_include_tag resource.url %>
+    <%end %>
   </body>
 </html>

@@ -1,22 +1,28 @@
 # Configure HTTP/2 Server Push
 
 <% sitemap.resources.select { | resource | resource.path =~ /\.(html)/ }.each do | resource | %>
-<%= resource.url %>
-  <% sitemap.resources.select { | resource | resource.path =~ /^(?!.json|sw|cache-polyfill.js$).*\.(js|css|woff)$/ }.each do | resource | %>
-
-    <% if resource.path =~ /\.(css)/ %>
-      <% extension = 'rel=preload; as=style' %>
-    <% elsif resource.path =~ /\.(js)/ %>
-      <% extension = 'rel=preload; as=script' %>
-    <% elsif resource.path =~ /\.(woff)/  %>
-      <% extension = 'rel=preload; as=font; crossorigin' %>
+<% if resource.url != '/admin/' %>
+  <%= resource.url %>
+    <% sitemap.resources.select { | resource | resource.path =~ /^(?!.*netlify|react|cms|sw|json|cache).*\.(js|css|woff)$/ }.each do | resource | %>
+      <% if resource.path =~ /\.(css)/ %>
+        <% extension = 'rel=preload; as=style' %>
+      <% elsif resource.path =~ /\.(js)/ %>
+        <% extension = 'rel=preload; as=script' %>
+      <% elsif resource.path =~ /\.(woff)/  %>
+        <% extension = 'rel=preload; as=font; crossorigin' %>
+      <% end %>
+      Link: <<%= resource.url %>>; <%= extension %>
     <% end %>
-    Link: <<%= resource.url %>>; <%= extension %>
-  <% end %>
+<% else %>
+  <%= resource.url %>
+    <% sitemap.resources.select { | resource | resource.path =~ /^(?!.*txt|assets)(react|netlify|cms).*$/}.each do | resource | %>
+      Link: <<%= resource.url %>>; 'rel=preload; as=script'
+    <% end %>
 <%end%>
+<%end %>
 
 # Set a long cache expiry on assets with font or image extensions
-<% sitemap.resources.select { | resource | resource.path =~ /^(?!manifest.json|sw|cache-polyfill.js$).*\.(css|js|woff|svg|jpg|png|mp4)/ }.each do | resource | %>
+<% sitemap.resources.select { | resource | resource.path =~ /^(?!.*manifest|sw|cache).*.*\.(css|js|woff|svg|jpg|png|mp4)/ }.each do | resource | %>
 <%= resource.url %>
   Cache-Control: public, max-age=31556926
 <%end%>
