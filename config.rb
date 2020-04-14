@@ -12,19 +12,20 @@ set :js_dir,     'assets/javascripts'
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
-activate(
-  :external_pipeline,
-  name: :webpack,
-  command: build? ? 'yarn run build' : 'yarn run start',
-  source: 'dist',
-  latency: 1
-)
+activate :external_pipeline,
+         name: :webpack,
+         command: build? ? 'yarn run build' : 'yarn run start',
+         source: 'dist',
+         latency: 1
 
 page '/*.xml',  layout: false
 page '/*.json', layout: false
 page '/*.txt',  layout: false
 page '/admin/*', layout: false
 page '/sitemap.xml', layout: false
+
+activate :directory_indexes
+page '/identity/*', directory_index: false, layout: false
 
 proxy '/sw.js', 'serviceworkers.txt', layout: false, ignore: true
 proxy '/cache-polyfill.js', 'cache-polyfill.txt', layout: false, ignore: true

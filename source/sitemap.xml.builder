@@ -1,6 +1,6 @@
 xml.instruct!
 xml.urlset 'xmlns' => 'http://www.sitemaps.org/schemas/sitemap/0.9' do
-  sitemap.resources.select { |page| page.path =~ /\.html/ }.each do |page|
+  sitemap.resources.select { |page| page.path =~ /^(?!.*identity|admin).*\.html/ }.each do |page|
     xml.url do
       xml.loc "#{config[:site_url]}/#{page.destination_path}"
       xml.lastmod Date.today.to_time.iso8601
