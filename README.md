@@ -5,6 +5,7 @@
 - [webpack](https://webpack.js.org) with [Babel](https://babeljs.org)
 - [Sass](https://sass-lang.com)
 - [Netlify CMS](https://www.netlifycms.org/)
+- [PurgeCSS](https://purgecss.com/)
 
 ### Installation
 ```
