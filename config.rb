@@ -24,6 +24,9 @@ page '/*.txt',  layout: false
 page '/admin/*', layout: false
 page '/sitemap.xml', layout: false
 
+ignore   File.join(config[:js_dir], '*')
+ignore   File.join(config[:css_dir], '*')
+
 activate :directory_indexes
 page '/identity/*', directory_index: false, layout: false
 
@@ -37,8 +40,6 @@ configure :development do
 end
 
 configure :build do
-  ignore   File.join(config[:js_dir], '*')
-  ignore   File.join(config[:css_dir], '*')
   set      :relative_links, true
   activate :gzip
   activate :relative_assets

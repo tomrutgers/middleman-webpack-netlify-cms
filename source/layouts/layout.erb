@@ -6,7 +6,7 @@
     <meta name="description" content="A Middleman + Netlify CMS starter running an external pipeline with Webpack & Babel">
 
     <%# Getting the assets generated from webpack. Using a regex because of asset hashes%>
-    <% sitemap.resources.select {|resource| resource.path =~ /^(?!.*txt|assets)(main).*$/}.each do |resource| %>
+    <% sitemap.resources.select {|resource| resource.path =~ /^(?!.*txt)(main).*$/}.each do |resource| %>
       <%# stylesheet %>
       <% if resource.path =~ /\.(css)/ %>
         <link rel="stylesheet" type="text/css" href="/<%= resource.path %>">
