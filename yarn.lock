@@ -1621,14 +1621,14 @@ assert@^1.1.1:
     object-assign "^4.1.1"
     util "0.10.3"
 
-assets-webpack-plugin@^5.0.2:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/assets-webpack-plugin/-/assets-webpack-plugin-5.0.2.tgz#d23aa60a48827908dded20102470536beeba8032"
-  integrity sha512-NnVoBmee2fp7qAkk0fJxIu9GE+VTNAWTbCWTTdU76W4B0H7GGDiVF+6P5DULyGQKmMW5JnNBgp6DRY1fSK/U8w==
+assets-webpack-plugin@^5.0.3:
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/assets-webpack-plugin/-/assets-webpack-plugin-5.0.3.tgz#745da864ffbd71b7579bfd137f2201bfbfd1469b"
+  integrity sha512-RALKT/kFv7NyuPozS+52KepbU0u4egk0YjlzigGXXXGCpouWj6rdCCl4/nAdD+adSFSltgc4GSGEPNBwzINvGA==
   dependencies:
     camelcase "6.0.0"
     escape-string-regexp "4.0.0"
-    lodash "4.17.15"
+    lodash "4.17.19"
     mkdirp "1.0.4"
 
 assign-symbols@^1.0.0:
@@ -4968,10 +4968,10 @@ lodash.templatesettings@^4.0.0:
   dependencies:
     lodash._reinterpolate "^3.0.0"
 
-lodash@4.17.15, lodash@^4.0.0, lodash@^4.1.1, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.4, lodash@~4.17.12:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
-  integrity sha512-8xOcRHvCjnocdS5cpwXQXVzmmh5e5+saE2QGoeQmbKmRS6J3VQppPOIt0MnmE+4xlZoumy0GPG0D0MVIQbNA1A==
+lodash@4.17.19, lodash@^4.0.0, lodash@^4.1.1, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.4, lodash@~4.17.12:
+  version "4.17.19"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
+  integrity sha512-JNvd8XER9GQX0v2qJgsaN/mzFCNA5BRe/j8JN9d+tWyGLSodKQHKFicdwNYzWwI3wjRnaKPsGj1XkBjx/F96DQ==
 
 log-symbols@^2.2.0:
   version "2.2.0"
