@@ -29,7 +29,7 @@
     "stylelint": "^13.6.1",
     "stylelint-config-recommended-scss": "^4.1.0",
     "stylelint-scss": "^3.18.0",
-    "terser-webpack-plugin": "^3.0.2",
+    "terser-webpack-plugin": "^3.0.8",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.12",
     "webpack-merge": "^4.2.2"
