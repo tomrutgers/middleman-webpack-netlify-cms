@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (5.2.4.3)
+    activesupport (5.2.4.4)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 0.7, < 2)
       minitest (~> 5.1)
@@ -9,7 +9,7 @@ GEM
     addressable (2.7.0)
       public_suffix (>= 2.0.2, < 5.0)
     ast (2.4.1)
-    backports (3.18.1)
+    backports (3.18.2)
     builder (3.2.4)
     capybara (3.33.0)
       addressable
@@ -78,15 +78,15 @@ GEM
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
     memoist (0.16.2)
-    middleman (4.3.8)
+    middleman (4.3.11)
       coffee-script (~> 2.2)
       haml (>= 4.0.5)
       kramdown (>= 2.3.0)
-      middleman-cli (= 4.3.8)
-      middleman-core (= 4.3.8)
-    middleman-cli (4.3.8)
+      middleman-cli (= 4.3.11)
+      middleman-core (= 4.3.11)
+    middleman-cli (4.3.11)
       thor (>= 0.17.0, < 2.0)
-    middleman-core (4.3.8)
+    middleman-core (4.3.11)
       activesupport (>= 4.2, < 6.0)
       addressable (~> 2.3)
       backports (~> 3.6)
@@ -130,7 +130,7 @@ GEM
       middleware
       thor
       thread_safe
-    public_suffix (4.0.5)
+    public_suffix (4.0.6)
     rack (2.2.3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
