@@ -8,7 +8,7 @@
   "browserslist": ">0.25%, not ie 11, not op_mini all, not dead",
   "devDependencies": {
     "@babel/core": "^7.12.3",
-    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-env": "^7.12.1",
     "assets-webpack-plugin": "^5.1.2",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
