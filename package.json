@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.4",
-    "netlify-cms-app": "^2.12.25",
+    "netlify-cms-app": "^2.13.1",
     "react": "^16.14.0",
     "react-dom": "^16.13.1"
   }
