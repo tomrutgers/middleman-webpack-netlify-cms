@@ -39,7 +39,7 @@
     "build": "NODE_ENV=production ./node_modules/webpack/bin/webpack.js --bail -p"
   },
   "dependencies": {
-    "core-js": "^3.8.3",
+    "core-js": "^3.9.1",
     "netlify-cms-app": "^2.14.26",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
