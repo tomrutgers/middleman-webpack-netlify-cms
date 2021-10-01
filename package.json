@@ -8,13 +8,13 @@
   "browserslist": ">0.25%, not ie 11, not op_mini all, not dead",
   "devDependencies": {
     "@babel/core": "^7.13.10",
-    "@babel/preset-env": "^7.13.8",
+    "@babel/preset-env": "^7.14.7",
     "assets-webpack-plugin": "^5.1.2",
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "5.1.2",
     "css-loader": "^5.1.2",
-    "eslint": "^7.21.0",
+    "eslint": "^7.29.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",
     "file-loader": "^6.2.0",
@@ -39,8 +39,8 @@
     "build": "NODE_ENV=production ./node_modules/webpack/bin/webpack.js --bail -p"
   },
   "dependencies": {
-    "core-js": "^3.9.1",
-    "netlify-cms-app": "^2.14.26",
+    "core-js": "^3.15.2",
+    "netlify-cms-app": "^2.15.20",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
   }
