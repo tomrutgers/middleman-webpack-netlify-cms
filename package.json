@@ -20,8 +20,9 @@
     "file-loader": "^6.2.0",
     "mini-css-extract-plugin": "^1.6.2",
     "node-sass": "^4.14.1",
+    "postcss": "^8.3.8",
     "postcss-import": "^12.0.1",
-    "postcss-loader": "^3.0.0",
+    "postcss-loader": "^4.0.3",
     "postcss-preset-env": "^6.3.0",
     "purgecss-webpack-plugin": "^4.0.3",
     "sass-loader": "^10.1.1",
@@ -42,6 +43,7 @@
     "core-js": "^3.18.1",
     "netlify-cms-app": "^2.15.20",
     "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "react-dom": "^16.14.0",
+    "tailwindcss": "^2.2.16"
   }
 }

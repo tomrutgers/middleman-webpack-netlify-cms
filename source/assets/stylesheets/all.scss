@@ -1,5 +1,11 @@
-$font-base: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Helvetica", "Roboto", Arial, sans-serif;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 body {
-  font-family: $font-base;
+  @apply font-sans antialiased;
+}
+
+h1 {
+  @apply text-4xl font-bold;
 }
