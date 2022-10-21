@@ -119,7 +119,7 @@ GEM
     mini_portile2 (2.8.0)
     minitest (5.14.4)
     multi_test (0.1.2)
-    nokogiri (1.13.3)
+    nokogiri (1.13.9)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     padrino-helpers (0.15.1)
