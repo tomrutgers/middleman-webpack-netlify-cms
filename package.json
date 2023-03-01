@@ -44,6 +44,6 @@
     "netlify-cms-app": "^2.15.46",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "tailwindcss": "^2.2.16"
+    "tailwindcss": "^3.2.7"
   }
 }
